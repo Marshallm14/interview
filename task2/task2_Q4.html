@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <h1>Task2_Q4</h1>
+    Please Enter Comma Separated string values for objects having key(name): <input type="text" name="stringArray"
+        id="stringArray">
+    <button onclick="fn()">Array of object values</button>
+
+    <script>
+        function fetchNames(names) {
+            const namesArray = names.map(name => name.name);
+            alert(JSON.stringify(namesArray));
+        }
+        function fn() {
+            const stringArray = document.getElementById("stringArray").value;
+            if (!stringArray) {
+                alert("Please Enter strings for Array");
+                return;
+            }
+            const names = [];
+            stringArray.split(',').map(i => names.push({ name: i }));
+            fetchNames(names);
+        }
+    </script>
+</body>
+
+</html>

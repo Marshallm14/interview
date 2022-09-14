@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <h1>Task1_Q4</h1>
+    Please Enter Value of N to take sum first N Numbers : <input type="number" name="number" id="number">
+    <button onclick="fn()">Sum of first N Numbers</button>
+
+    <script>
+        function sumTillNumber(num) {
+            let s = 0;
+            for (let i = 1; i <= num; i++) {
+                s = s + i;
+            }
+            return s;
+        }
+        function fn() {
+            let num = document.getElementById('number').value;
+            num = Number(num);
+            if (num) {
+                let sum = sumTillNumber(num);
+                alert("Sum is : " + sum);
+            } else {
+                alert("Please Enter a Number : ");
+            }
+
+        }
+    </script>
+</body>
+
+</html>

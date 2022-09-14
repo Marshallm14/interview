@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <h1>Task1_Q3</h1>
+    Please Enter a String to skip last Character : <input type="text" name="string" id="string">
+    <button onclick="fn()">Click to skip last Character</button>
+
+    <script>
+        function removeLastCharacter(str) {
+            let removedLastCharacter = str.slice(0, str.length - 1);
+            alert("String is : " + removedLastCharacter);
+        }
+        function fn() {
+            let str = document.getElementById('string').value;
+            if (str)
+                removeLastCharacter(str);
+            else
+                alert("Please Enter a String");
+        }
+    </script>
+</body>
+
+</html>
